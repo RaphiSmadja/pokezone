@@ -1,0 +1,160 @@
+* {
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    background-color: black
+}
+
+#audioBtn {
+    color: rgb(0, 0, 0);
+    opacity: .5;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+#overlappingDiv {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#menu {
+    display: none;
+    background-color: white;
+    border: 4px solid black;
+    width: 250px;
+    position: absolute;
+    top: 150px;
+    right: 50px;
+    padding: 0px 12px 12px 12px;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding-left: 0px !important;
+}
+
+#menu ul li {
+    padding: 20px;
+    text-decoration: none;
+}
+
+li:hover {
+    background-color: grey;
+    color: white;
+}
+
+#rivalPokemon {
+    display: none;
+    background-color: white;
+    border: 4px solid black;
+    width: 250px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    padding: 0px 12px 12px 12px;
+}
+
+
+#myPokemon {
+    display: none;
+    background-color: white;
+    border: 4px solid black;
+    width: 250px;
+    position: absolute;
+    bottom: 200px;
+    right: 50px;
+    padding: 0px 12px 12px 12px;
+}
+
+#battleBar {
+    display: none;
+    opacity: 0.9;
+    background-color: white;
+    height: 150px;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#battleDialog {
+    width: 60%;
+    padding: 10px;
+}
+
+#battleChoice {
+    display: inline-block;
+}
+
+.action {
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#actionFight {
+    background: #ea1d00;
+}
+
+#actionFight:hover {
+    background: gray;
+    color:  #ea1d00
+}
+
+#actionBag {
+    background: #0048ea;
+}
+
+#actionBag:hover {
+    background: gray;
+    color: #0048ea
+}
+
+#actionPokemon {
+    background: #e7ea00;
+}
+
+#actionPokemon:hover {
+    background: gray;
+    color: #e7ea00
+}
+
+#actionRun {
+    background: #00ea1d;
+}
+
+#actionRun:hover {
+    background: gray;
+    color: #00ea1d
+}
+
+#healthBarTotal {
+    height: 5px;
+    background-color: #ccc;
+    margin-top: 10px;
+}
+
+
+#healthBar {
+    height: 5px;
+    background-color: green;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px
+}

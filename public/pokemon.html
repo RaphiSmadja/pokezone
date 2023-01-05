@@ -1,0 +1,71 @@
+<head>
+  <script src="https://unpkg.com/konva@8.3.14/konva.min.js"></script>
+  <script src="https://unpkg.com/gifler@0.1.0/gifler.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<div style="display: inline-block; position: relative;">
+  <span><i onclick="audioPlay()" id="audioBtn" class="fa fa-volume-off fa-2x"></i></span>
+  <div id="overlappingDiv">
+  </div>
+  <div id="menu">
+    <ul>
+      <li onclick="checkPokedex()">Pokédex</li>
+      <li onclick="checkPokemon()">Pokémon</li>
+      <li onclick="checkBag()">Bag</li>
+      <li onclick="save()">Save</li>
+      <li onclick="options()">Options</li>
+      <li onclick="exit()">Exit</li>
+    </ul>
+  </div>
+  <div id="rivalPokemon">
+    <h3>rivalPokemon</h1>
+      <div style="position: relative;">
+        <div id="healthBarTotal"></div>
+        <div id="healthBar"></div>
+      </div>
+  </div>
+  <div id="myPokemon">
+    <h3>myPokemon</h1>
+      <div style="position: relative;">
+        <div id="healthBarTotal"></div>
+        <div id="healthBar"></div>
+      </div>
+  </div>
+  <div id="battleBar">
+    <table style="    width: 100%;
+    height: 100%;">
+      <tr>
+        <td id="battleDialog">
+          ...
+        </td>
+
+        <td style="width: 40%;padding-top: 0px;padding-bottom: 0px;">
+          <table style="    width: 100%;
+          height: 100%;">
+            <tr style="height: 50%;">
+              <td class="action" onclick="fightLaunch()" id="actionFight">FIGHT</td>
+              <td class="action" onclick="bagLaunch()" id="actionBag">BAG</td>
+            </tr>
+            <tr style="height: 50%;">
+              <td class="action" onclick="pokemonLaunch()" id="actionPokemon">POKEMON</td>
+              <td class="action" onclick="runLaunch()" id="actionRun">RUN</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <canvas></canvas>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+  integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./data/collisions.js"></script>
+<script src="./data/battles.js"></script>
+<script src="./pokemon.js"></script>
+<script src="./classes.js"></script>
+<script src="./index.js"></script>
