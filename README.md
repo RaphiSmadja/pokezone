@@ -11,3 +11,5 @@ npm i
 node app.js
 ```
 go to url localhost:3000/pokemon.html
+
+![alt text](https://github.com/RaphiSmadja/pokezone/blob/master/public/img/mapv1.png)
