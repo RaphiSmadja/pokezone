@@ -200,7 +200,7 @@ function animate() {
                     rectangle1: player,
                     rectangle2: battleZone
                 }) && overlappingArea > player.width * player.height / 2
-                && Math.random() < 0.01
+                && Math.random() < 0.1
             ) {
                 console.log(battle)
                 battle.initiated = true
@@ -466,6 +466,10 @@ function drawBattlePokemon() {
     document.getElementById("battleBar").style.display = "block"
 }
 
+function fightLaunch() {
+
+}
+
 function runLaunch() {
     if (Math.random() > 0.5) {
         dialogText.push("Vous avez pris la fuite");
@@ -473,6 +477,7 @@ function runLaunch() {
         readDialog()
     } else {
         dialogText.push("Vous n'avez pas réussi à fuir");
+        readDialog()
     }
 }
 
@@ -500,6 +505,7 @@ async function readDialog() {
 }
 
 var exit = 0;
+var init = 1;
 let battleAnimationId
 function animateBattle() {
     battleAnimationId = window.requestAnimationFrame(animateBattle)
@@ -507,6 +513,11 @@ function animateBattle() {
     drawRivalPokemon()
     drawMyPokemon()
     drawBattlePokemon()
+
+    if(init === 1) {
+    document.getElementById('battleDialog').innerHTML = "What will " + myPokemon.name + " do ?"
+        init = 0;
+    }
     battlePokemonRival.drawFacePokemon()
     battlePokemon.drawBackPokemon()
     if (exit === 1) {

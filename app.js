@@ -63,7 +63,7 @@ app.get('/login',(req,res) => {
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'views')))
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

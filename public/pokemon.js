@@ -6,6 +6,10 @@ class Pokemon {
         this.level = level;
         this.stats = stats;
     }
+
+    attack(pokemon1, pokemon2) {
+        
+    }
 }
 
 class Stats {
